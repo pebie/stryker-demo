@@ -1,0 +1,23 @@
+{
+  "name": "stryker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mocha": "^8.2.3",
+    "@stryker-mutator/core": "^5.2.2",
+    "@stryker-mutator/jest-runner": "^5.2.2",
+    "@stryker-mutator/typescript": "^4.0.0",
+    "expect": "^27.0.6",
+    "mocha": "^9.0.2",
+    "ts-node": "^8.5.2",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "npx mocha --require ts-node/register/transpile-only tests/unit/*.test.ts",
+    "mutation": "npx stryker run"
+  }
+}
